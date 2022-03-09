@@ -1,0 +1,61 @@
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.profileholder{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* center */
+    width: 80%;
+    margin: auto;
+    grid-gap: 10px;
+}
+
+.profileholder p{
+    font-size: 1.2rem;
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+    color: rgba(255, 255, 255, 0.87);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+
+.profileholder p:nth-child(1){
+    color: rgb(152, 192, 252);
+}
+.profileholder p:nth-child(2){
+    color: rgb(9, 255, 0);
+}
+.profileholder p:nth-child(3){
+    color: rgb(255, 153, 0);
+}
+.profileholder p:nth-child(4){
+    color: rgb(255, 17, 0);
+}
+
+.profileholder p:nth-child(6){
+    color: rgb(43, 255, 0);
+}
+.profileholder p:nth-child(7){
+    color: rgb(255, 241, 112);
+}
+.profileholder p:nth-child(8){
+    color: rgb(0, 183, 255);
+}
+
+.profileholder p:nth-child(9){
+    color: rgb(174, 0, 255);
+}
