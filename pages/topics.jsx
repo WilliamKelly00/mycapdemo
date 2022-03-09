@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from '../components/Logo';
 import Link from 'next/link';
 import styles from '../styles/Topic.module.css'
+import Sidebar from '../components/Sidebar';
 
 
 export default function topics() {
@@ -13,6 +14,7 @@ export default function topics() {
 
   return (
     <div>
+      <Sidebar/>
         <Logo/>
         <p className={styles.title}>Educational Queries</p>
         <button className={styles.filter}>Filter</button>
