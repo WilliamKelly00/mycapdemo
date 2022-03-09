@@ -1,0 +1,63 @@
+.formstyle{
+    /* center form */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.inputbox input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 1.2rem;
+}
+
+.inputbox label{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.login{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7c3ef8;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.thirdparty{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.google{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    height: 65px;
+    border: none;
+    border-radius: 5px;
+    background-color: #bbbbbb;
+    color: white;
+    font-size: 1.2rem;
+}
+.fb{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4267B2;
+    color: white;
+    font-size: 1.2rem;
+}
