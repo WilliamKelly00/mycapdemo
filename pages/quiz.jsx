@@ -12,12 +12,12 @@ export default function quiz() {
     const pickAnswer = (e) => {
         e.preventDefault();
         let userAnswer = e.target.elements.answers.value;
-        if (quiz[number].answer === userAnswer) setPoints(points + 1);
+        if (quiz[number].answer === userAnswer) setPoints(points + 50);
         setNumber(number + 1);
     }
 
     useEffect(() => {
-        fetch("https://opentdb.com/api.php?amount=10&category=18&type=multiple")
+        fetch(`https://opentdb.com/api.php?amount=5&category=18&type=multiple`)
             .then(res => res.json())
             .then(data => {
                 setQuiz(data.results.map(item => (
@@ -37,6 +37,15 @@ export default function quiz() {
         {quiz[number] &&
         <form onSubmit={pickAnswer}>
         <h1>{quiz[number].question}</h1>
+        <h2>Points: {points}</h2>
+        <CountdownCircleTimer
+            isPlaying
+            duration={60}
+            colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+            colorsTime={[7, 5, 2, 0]}
+        >
+            {({ remainingTime }) => remainingTime}
+        </CountdownCircleTimer>
             {quiz[number].options.map((item, index) =>(
                 <label key={index}>
                     <input type="radio" name="answers" key={index} value={item}></input>
@@ -44,14 +53,6 @@ export default function quiz() {
                 </label>
             ))}
         <button type="submit">Submit</button>
-        <CountdownCircleTimer
-            isPlaying
-            duration={7}
-            colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-            colorsTime={[7, 5, 2, 0]}
-        >
-            {({ remainingTime }) => remainingTime}
-        </CountdownCircleTimer>
         </form>
         }
 
