@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react"
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+import Link from 'next/link'
 
 export default function quiz() {
     const [quiz, setQuiz] = useState([]);
@@ -35,9 +36,9 @@ export default function quiz() {
   return (
     <div>
         {quiz[number] &&
+        <>
         <form onSubmit={pickAnswer}>
         <h1>{quiz[number].question}</h1>
-        <h2>Points: {points}</h2>
         <CountdownCircleTimer
             isPlaying
             duration={60}
@@ -54,7 +55,14 @@ export default function quiz() {
             ))}
         <button type="submit">Submit</button>
         </form>
+        </>
         }
+        <>
+        <h1>You scored {points} points!</h1>
+        <Link href="/topics">
+            <button>Back to topics</button>
+            </Link>
+        </>
 
     </div>
   )
