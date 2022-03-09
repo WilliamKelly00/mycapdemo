@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from "next/link"
+import Sidebar from '../components/Sidebar'
 
 export default function Home() {
   return (
@@ -12,9 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Link href={"/quiz"}>
-        <button>Hello world!</button>
-      </Link>
+      <Sidebar/>
+      <div className={styles.center}>
+      <h1>Truth or Err</h1>
+      </div>
       
     </div>
   )

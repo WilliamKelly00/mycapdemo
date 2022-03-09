@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../components/Logo'
+import Sidebar from '../components/Sidebar';
 import styles from '../styles/Profile.module.css'
 
 export default function profile() {
@@ -7,9 +8,10 @@ export default function profile() {
     let y = 25125123;
   return (
     <div>
+      <Sidebar/>
         <Logo/>
         <div className={styles.pic}>Profile pic</div>
-        
+
         <div className={styles.profileholder}>
           <p>{x} Points = {y} TorE Tokens</p>
           <p>{y} TorE Tokens = $702,215 USD</p>
